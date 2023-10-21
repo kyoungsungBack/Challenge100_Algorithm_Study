@@ -1,4 +1,4 @@
-package JAY.Week1;
+package BKS;
 
 public class POG_뒤에있는큰수찾기 {
 }

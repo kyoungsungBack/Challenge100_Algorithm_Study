@@ -1,4 +1,4 @@
-package JAY.Week1;
+package JSB;
 
 public class POG_광물캐기 {
 }

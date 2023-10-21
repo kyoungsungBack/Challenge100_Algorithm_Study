@@ -1,4 +1,4 @@
-package BKS.Week1;
+package JSB;
 
 public class POG_영어끝말잇기 {
 }
