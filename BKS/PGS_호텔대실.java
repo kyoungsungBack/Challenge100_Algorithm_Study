@@ -10,6 +10,17 @@ public class PGS_호텔대실 {
         //String[][] book_time = {{"09:10", "10:10"}, {"10:20", "12:20"}};
         int answer = 0;
 
+        // 1 시작시간을 기준으로 오름차순 정렬
+        Arrays.sort(book_time, new Comparator<String[]>() {
+            public int compare(String[] o1, String[] o2) {
+                if (o1[0].contentEquals(o2[0])) { // 시작시간이 같은 경우 종료시간 으로 오름차순
+                    return o1[1].compareTo(o2[1]);
+                } else {
+                    return o1[0].compareTo(o2[0]);
+                }
+            }
+        });
+
         // 2 현재 사용중인 방, 종료시간 기준으로 오름차순
         //  (다른 예약의 시작시간과 비교하여 같은 객실이용이 가능한지 판단의 근거)
         PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
@@ -20,17 +31,6 @@ public class PGS_호텔대실 {
                     return 0;
                 } else {
                     return -1;
-                }
-            }
-        });
-
-        // 1 시작시간을 기준으로 오름차순 정렬
-        Arrays.sort(book_time, new Comparator<String[]>() {
-            public int compare(String[] o1, String[] o2) {
-                if (o1[0].contentEquals(o2[0])) { // 시작시간이 같은 경우 종료시간 으로 오름차순
-                    return o1[1].compareTo(o2[1]);
-                } else {
-                    return o1[0].compareTo(o2[0]);
                 }
             }
         });
