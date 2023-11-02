@@ -11,7 +11,7 @@ public class PGS_기능개발 {
 
             //기능 별 개발 시간
             for(int i=0;i<progresses.length;i++){
-                int sTime = (int)Math.ceil((100-progresses[i])/speeds[i]) ;//올림 사용
+                int sTime = (int)Math.ceil((100-progresses[i])/(double)speeds[i]) ;//올림 사용
                 date.add(sTime);
             }
             int front = date.poll();//맨 앞 날짜 확인.
