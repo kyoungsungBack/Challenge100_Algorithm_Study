@@ -10,47 +10,32 @@ public class PGS_주차요금계산 {
         //int[] fees = {120, 0, 60, 591};
         String[] records = {"00:00 1234 IN"};
         int[] fees = {1, 461, 1, 10};
-        Map<String, Integer> map = new HashMap<>();
-        // 주차장의 요금표와 차량이 들어오고(입차) 나간(출차) 기록이 주어졌을 때
-        // 차량별로 주차 요금을 계산
-        // 00:00부터 23:59까지의 입/출차 내역
-        // IN: 입차, OUT: 출차
-        // 입차 -> 출차 순이고 출차를 해야 새로운 입차가 가능
+
+        Map<String, Integer> map = new HashMap<>(); // key: 차량번호, value: 이용시간
 
         for(int i = 0 ; i < records.length ; i++){ // 입차
             int inTime = (Integer.parseInt(records[i].substring(0, 2)) * 60) + Integer.parseInt(records[i].substring(3, 5)); // 시간
             String inNum = records[i].substring(6, 10); // 차번호
             String inOrOut = records[i].substring(11, 12); // 입출차
-            boolean isFirst = false; // 출차내역
 
-            if (inOrOut.equals("O")) { // 출차이면 씹는다
-                continue;
-            }
-
-            for(int j = i + 1 ; j < records.length ; j++){ // 출차
-                int outTime = (Integer.parseInt(records[j].substring(0, 2)) * 60) + Integer.parseInt(records[j].substring(3, 5)); // 시간
-                String outNum = records[j].substring(6, 10); // 차번호
-
-                if (inNum.equals(outNum)) {
-                    int num = outTime - inTime;
-                    int sum = map.get(inNum) == null ? 0 : map.get(inNum);
-                    map.put(inNum, sum + num); // 누적시간
-                    isFirst = true;
-                    break;
-                }
-            }
-
-            if (isFirst == false) { // 출차내역 없으면 23:59로 계산
-                int num = (23 * 60 + 59) - inTime;
-                int sum = map.get(inNum) == null ? 0 : map.get(inNum);
-                map.put(inNum, sum + num); // 누적시간
-            }
+            inTime = inOrOut.equals("I") ? inTime * -1 : inTime;
+            int sum = map.get(inNum) == null ? 0 : map.get(inNum);
+            map.put(inNum, sum + inTime); // 누적시간
         }
 
         int[] answer = new int[map.size()];
         int idx = 0;
+
         ArrayList<String> k = new ArrayList<>(map.keySet());
         Collections.sort(k);
+
+        for(String key : k) {
+            if(map.get(key) <= 0) { // 0 또는 음수: 입차만 있는 경우
+                int num = 23 * 60 + 59;
+                map.put(key, map.get(key) + num);
+            }
+        }
+
         // 주차요금 계산
         for (String key : k) {
             int cost = map.get(key);
