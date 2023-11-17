@@ -20,13 +20,13 @@ public class PGS_뉴스클러스터링 {
         }
 
         // 특수문자는 공백으로 대체
-        str1 = str1.replaceAll(match, "*");
-        str2 = str2.replaceAll(match, "*");
+        str1 = str1.replaceAll(match, " ");
+        str2 = str2.replaceAll(match, " ");
 
         // str1 에 대해서 키를 대문자로 치환 후 개수 세팅
         for (int i = 0; i < str1.length() - 1; i++) {
             String key = str1.substring(i, i + 2);
-            if (!key.contains("*") && key.length() == 2) {
+            if (!key.contains(" ") && key.length() == 2) {
                 if (A.get(key.toUpperCase()) != null) {
                     A.put(key.toUpperCase(), A.get(key.toUpperCase()) + 1);
                 } else {
@@ -38,7 +38,7 @@ public class PGS_뉴스클러스터링 {
         // str2 에 대해서 키를 대문자로 치환 후 개수 세팅
         for (int i = 0; i < str2.length() - 1; i++) {
             String key = str2.substring(i, i + 2);
-            if (!key.contains("*") && key.length() == 2) {
+            if (!key.contains(" ") && key.length() == 2) {
                 if (B.get(key.toUpperCase()) != null) {
                     B.put(key.toUpperCase(), B.get(key.toUpperCase()) + 1);
                 } else {
