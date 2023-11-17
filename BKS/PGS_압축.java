@@ -23,9 +23,9 @@ public class PGS_압축 {
             String w = "";
             // 3. 사전에 등록안되어 있으면 반복문 탈출하여 사전에 등록한다
             while (idx < msg.length()) {
-                if (!lzw.containsKey(w + msg.charAt(idx))) { // 사전에 등록 O
+                if (!lzw.containsKey(w + msg.charAt(idx))) { // 사전에 등록 X
                     break;
-                } else { // 사전에 등록 X
+                } else { // 사전에 등록 O
                     w += msg.charAt(idx); // 사전에 등록여부를 위해 다음글자 합침
                 }
                 idx++; // 3.1 msg의 키를 만들어주기 위해 한글자씩 더해야 하므로 idx 증가시켜준다.
@@ -33,7 +33,7 @@ public class PGS_압축 {
 
             ans.add(lzw.get(w)); // 4. 해당 문자의 색인 번호 출력
 
-            if (idx < msg.length()) {
+            if (idx < msg.length()) { // 마지막 문자를 포함한 key는 어차피 등록되있고 추가등록은 없어야함
                 lzw.put(w + msg.charAt(idx), value++); // 5. 최종으로 새로운 key 등록한다.
             }
         }
