@@ -10,29 +10,31 @@ public class PGS_네트워크 {
         int n = 3;
         int[][] computers = {{1, 1, 0}, {1, 1, 0}, {0, 0, 1}};
         int answer = 0;
-        visited = new boolean[n]; // 0으로 세팅
+        visited = new boolean[n];
 
-        for (int i = 0; i < n; i++) { // 시작점 n만큼 확인 -> 네트워크 개수
-            if (visited[i] == false) {
-                bfs(i, computers, n);
+        // 모든 점들에 대해 네트워크 확인
+        for (int i = 0 ; i < n ; i++) {
+            if (visited[i] == false) { // 아직 방문을 안했으면 네트워크 이다.
+                bfs(i, n, computers);
                 answer++;
             }
         }
         System.out.println(answer);
     }
 
-    public static void bfs(int i, int[][] computers, int n) {
-        Queue<Integer> que = new LinkedList<>();
-        que.offer(i); // 1. 시작점
+    public static void bfs(int i, int n, int[][] computers) {
+        Queue<Integer> que = new LinkedList<>(); // que를 통해 연결된 점 확인
+        que.offer(i);
         visited[i] = true;
 
-        while (!que.isEmpty()) {
-            int value = que.poll(); // 그 다음 연결의 시작점
+        while (!que.isEmpty()) { // 연결된 모든 점의 확인이 끝날 때 까지
+            int cur = que.poll();
 
-            for (int j = 0; j < n; j++) { // 2. 모든점을 방문
-                if (visited[j] == false && computers[value][j] == 1) { // 3. 연결되있으면 간다
-                    visited[j] = true; // 4. 방문표시
-                    que.offer(j); // 5. 큐에 넣는다.
+            // 현재 점에서 모든 점들에 대한 연결 확인
+            for (int j = 0 ; j < n ; j++) {
+                if (visited[j] == false && computers[cur][j] == 1) {
+                    visited[j] = true;
+                    que.offer(j);
                 }
             }
         }
