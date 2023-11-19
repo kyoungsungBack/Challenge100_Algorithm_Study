@@ -39,4 +39,13 @@ public class PGS_네트워크 {
             }
         }
     }
+    public static void dfs(int i, int n, int[][] computers) {
+        // 현재 점에서 모든 점들에 대한 연결 확인
+        for (int j = 0 ; j < n ; j++) {
+            if (visited[j] == false && computers[i][j] == 1) {
+                visited[j] = true;
+                dfs(j, n, computers);
+            }
+        }
+    }
 }
