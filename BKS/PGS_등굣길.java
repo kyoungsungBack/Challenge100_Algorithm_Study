@@ -28,6 +28,8 @@ public class PGS_등굣길 {
                     map[i][j] = 0;
                     continue;
                 }
+                // map의 값이 int범위를 넘을 수 있다
+                // 효율성에서만 오류날 때는 자료형의 크기를 고려하자.
                 if (i != 0) map[i][j] += map[i - 1][j] % mod;
                 if (j != 0) map[i][j] += map[i][j - 1] % mod;
             }
