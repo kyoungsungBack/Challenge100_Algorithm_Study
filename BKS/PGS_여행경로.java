@@ -1,11 +1,13 @@
 package BKS;
 
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class PGS_여행경로 {
     static boolean[] visited;
     static ArrayList<String> ans;
+
     public static void main(String[] args) {
         String[][] tickets = {{"ICN", "SFO"}, {"ICN", "ATL"}, {"SFO", "ATL"}, {"ATL", "ICN"}, {"ATL", "SFO"}};
         String[] answer = {};
@@ -19,13 +21,14 @@ public class PGS_여행경로 {
 
         System.out.println(answer);
     }
+
     static public void dfs(int cnt, String ticket, String[][] tickets, String path) {
         if (cnt == tickets.length) {
             ans.add(path);
             return;
         }
 
-        for (int i = 0 ; i < tickets.length ; i++) {
+        for (int i = 0; i < tickets.length; i++) {
             if (visited[i] == false && ticket.equals(tickets[i][0])) {
                 visited[i] = true;
                 dfs(cnt + 1, tickets[i][1], tickets, path + " " + tickets[i][1]);
