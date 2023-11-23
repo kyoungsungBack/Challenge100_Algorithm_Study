@@ -1,6 +1,7 @@
 package BKS;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class PGS_방문길이 {
     static int[] mx = {0, 0, 1, -1};
@@ -48,5 +49,6 @@ public class PGS_방문길이 {
                 y = py;
             }
         }
+        System.out.println(path);
     }
 }
