@@ -23,7 +23,6 @@ public class PGS_단어변환 {
 
         if (m == Integer.MAX_VALUE) {
             System.out.println(0);
-            ;
         } else {
             System.out.println(m);
         }
