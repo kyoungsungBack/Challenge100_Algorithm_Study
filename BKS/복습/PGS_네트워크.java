@@ -3,6 +3,7 @@ package BKS.복습;
 public class PGS_네트워크 {
     static boolean[] visited;
     public static void main(String[] args) {
+        // 20231207 09:13 ~ 09:29
         int n = 3;
         int[][] computers = {{1, 1, 0},{1, 1, 0},{0, 0, 1}};
         int answer = 0;
