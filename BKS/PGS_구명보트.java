@@ -11,7 +11,7 @@ public class PGS_구명보트 {
         // 최대 2명이 짝이되고 무게제한이 있다.
         Arrays.sort(people);
         int left = 0;
-        int right = 0;
+        int right = people.length - 1;
 
         while (left <= right) {
             // 최소 + 최대 가 limit보다 작으면 짝이 된다.
@@ -24,5 +24,6 @@ public class PGS_구명보트 {
             // 매번 짝이 생성되므로 answer 1 증가
             answer++;
         }
+        System.out.println(answer);
     }
 }
