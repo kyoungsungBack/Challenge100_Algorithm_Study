@@ -3,6 +3,7 @@ package BKS.복습;
 import java.util.Arrays;
 
 public class PGS_구명보트 {
+    // 20231211 17:02 ~ 17:13
     public static void main(String[] args) {
         int[] people = {70, 50, 80, 50};
         int limit = 100;
