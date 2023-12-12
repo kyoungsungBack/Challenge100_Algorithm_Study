@@ -11,9 +11,8 @@ public class PGS_최고의집합 {
             System.out.println(-1);
             return;
         }
-        // 3 26
-        // 8 8 10
-        // 8 9 9
+        // n : 몫의 개수
+        // s : 수
         int num = s / n;
         int mod = s % n;
 
