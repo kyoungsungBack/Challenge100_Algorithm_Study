@@ -1,7 +1,5 @@
 package BKS;
 
-import java.util.Arrays;
-
 public class PGS_스티커모으기2 {
     public static void main(String[] args) {
         int answer = 0;
