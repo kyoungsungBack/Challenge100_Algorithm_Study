@@ -1,6 +1,7 @@
 package BKS;
 
 public class PGS_스티커모으기2 {
+    // 20231225 17:31 ~ 17:42
     public static void main(String[] args) {
         int answer = 0;
         int[] sticker = {14, 6, 5, 11, 3, 9, 2, 10};
