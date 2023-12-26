@@ -1,6 +1,7 @@
 package BKS;
 
 public class PGS_기지국설치 {
+    // 20231226 10:43 ~ 11:08
     public static void main(String[] args) {
         int n = 16;
         int[] stations = {9};
@@ -11,11 +12,9 @@ public class PGS_기지국설치 {
 
         for (int stat : stations) {
             if (begin < stat - w) {
-                int end = stat - w;
-                int len = end - begin;
+                answer += (stat - w - begin) / (2 * w + 1);
 
-                answer += len / (2 * w + 1);
-                if (len % (2 * w + 1) != 0) {
+                if ((stat - w - begin) % (2 * w + 1) != 0) {
                     answer++;
                 }
             }
@@ -25,7 +24,8 @@ public class PGS_기지국설치 {
 
         if (begin <= n) {
             answer += (n - begin + 1) / (2 * w + 1);
-            if ((n - begin + 1) % (w * 2 + 1) != 0) {
+
+            if ((n - begin + 1) % (2 * w + 1) != 0) {
                 answer++;
             }
         }
