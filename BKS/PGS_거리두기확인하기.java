@@ -7,7 +7,7 @@ import java.util.Queue;
 public class PGS_거리두기확인하기 {
     // 20230102 18:57 ~ 19:57 + 테스트케이스 해결시간
 
-    static int[] mx = {0, 0, 1, -1, 1, -1, 1, -1, 0, 0, 2, -2,};
+    static int[] mx = {0, 0, 1, -1, 1, -1, 1, -1, 0, 0, 2, -2};
     static int[] my = {1, -1, 0, 0, 1, 1, -1, -1, 2, -2, 0, 0};
     static int[] answer;
 
