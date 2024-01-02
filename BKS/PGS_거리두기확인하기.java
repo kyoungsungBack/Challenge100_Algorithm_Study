@@ -5,10 +5,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class PGS_거리두기확인하기 {
-    // 20230102 18:57 ~
+    // 20230102 18:57 ~ 19:57 + 테스트케이스 해결시간
 
-    static int[] mx = {0, 0, 1, -1, 1, -1, 1, -1};
-    static int[] my = {1, -1, 0, 0, 1, 1, -1, -1};
+    static int[] mx = {0, 0, 1, -1, 1, -1, 1, -1, 0, 0, 2, -2,};
+    static int[] my = {1, -1, 0, 0, 1, 1, -1, -1, 2, -2, 0, 0};
     static int[] answer;
 
     public static void main(String[] args) {
@@ -38,10 +38,10 @@ public class PGS_거리두기확인하기 {
 
         // 2. 맨허튼 거리 안에 P가 있는 경우
         // 2.1 P와 P 사이에 파티션이 있는지 없는지 확인
-        while (!que.isEmpty()) {
+        while(!que.isEmpty()) {
             int[] cur = que.poll();
 
-            for (int k = 0; k < 8; k++) {
+            for (int k = 0 ; k < 8 ; k++) {
                 int py = cur[0] + my[k];
                 int px = cur[1] + mx[k];
 
@@ -49,6 +49,23 @@ public class PGS_거리두기확인하기 {
                 // cur[0], px 와 py, cur[1] 이 둘 다 파티션이면 true
                 if (0 <= py && py < 5 && 0 <= px && px < 5) {
                     if (place[py].charAt(px) == 'P' && (place[cur[0]].charAt(px) != 'X' || place[py].charAt(cur[1]) != 'X')) {
+                        res = 0;
+                        break;
+                    }
+                }
+            }
+
+            for (int k = 8 ; k < 12 ; k++) {
+                int py = cur[0] + my[k];
+                int px = cur[1] + mx[k];
+
+                // 범위 안에만 확인
+                // 2칸 범위 내에 있고 가운데 빈 책상이면 false
+                if (0 <= py && py < 5 && 0 <= px && px < 5) {
+                    int yy = (py + cur[0]) / 2;
+                    int xx = (px + cur[1]) / 2;
+
+                    if (place[py].charAt(px) == 'P' && place[yy].charAt(xx) == 'O') {
                         res = 0;
                         break;
                     }
