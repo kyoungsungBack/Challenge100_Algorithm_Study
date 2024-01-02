@@ -44,7 +44,7 @@ public class PGS_합승택시요금 {
 
     public static int[] dijkstra(int start) {
         // 가중치 기준으로 오름차순
-        PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<>() {
+        PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
 
             @Override
             public int compare(int[] o1, int[] o2) {
