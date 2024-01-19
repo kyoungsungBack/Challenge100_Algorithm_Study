@@ -4,6 +4,7 @@ import java.util.HashSet;
 
 public class PGS_N으로표현 {
     // 20240118 12:05 ~ 12:17(다시 풀 것)
+    // 20240119 17:27 ~ 17:37
     public static void main(String[] args) {
         int answer = -1;
         int N = 5;
