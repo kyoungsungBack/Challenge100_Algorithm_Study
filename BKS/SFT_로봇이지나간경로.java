@@ -24,5 +24,6 @@ public class SFT_로봇이지나간경로 {
                 map[i][j] = str.charAt(j - 1);
             }
         }
+
     }
 }
