@@ -2,6 +2,7 @@ package BKS;
 
 public class PGS_땅따먹기 {
     // 20240205 17:33 ~ 17:50(시간초과)
+    // 20240210 17:34 ~ 17:43
     static int answer, N;
 
     public static void main(String[] args) {
@@ -13,7 +14,7 @@ public class PGS_땅따먹기 {
 
         /* 풀이2. DP */
         int[][] dp = new int[N][4];
-        dp[0] = land[0];
+        dp[0] = land[0].clone(); // 깊은복사
 
         for (int i = 1 ; i < N ; i++) {
             for (int j = 0 ; j < 4 ; j++) {
