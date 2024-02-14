@@ -19,7 +19,6 @@ public class PGS_프렌즈4블록 {
 
         // 2. 매 턴에 대해서 4블록을 찾고 답을 반환한다.
         // 이때, 더이상 4블록이 없으면 종료한다.
-
         while (true) {
             boolean flag = false;
             boolean[][] visited = new boolean[M][N];// 같은 턴에서 이미 없어진 블록임을 판단한다.
