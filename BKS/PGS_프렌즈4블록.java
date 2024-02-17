@@ -17,7 +17,6 @@ public class PGS_프렌즈4블록 {
             map[i] = board[i].toCharArray();
         }
 
-
         // 2. 매 턴에 대해서 4블록을 찾고 답을 반환한다.
         // 이때, 더이상 4블록이 없으면 종료한다.
         while (true) {
