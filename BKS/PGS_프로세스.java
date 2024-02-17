@@ -24,7 +24,7 @@ public class PGS_프로세스 {
                     answer++;
                     // 3. 찾으려는 알파벳의 위치일 경우 실행횟수를 반환한다.
                     if (location == i) {
-                        return answer;
+                        //return answer;
                     }
                 }
             }
