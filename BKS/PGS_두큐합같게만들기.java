@@ -42,7 +42,6 @@ public class PGS_두큐합같게만들기 {
                 break;
             }
 
-
             if (answer >= len * 3) {
                 break;
             }
