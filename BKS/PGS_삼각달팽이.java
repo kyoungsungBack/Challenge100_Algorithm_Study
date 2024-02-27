@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class PGS_삼각달팽이 {
     // 20240226 22:04 ~ 22:12 (복습 할 것)
+    // 20240227 13:41 ~ 13:46 (복습)
     public static void main(String[] args) {
         int n = 6;
         int[] answer = new int[(n * (n + 1)) / 2]; // 등차수열일 때 1~n까지의 합공식
