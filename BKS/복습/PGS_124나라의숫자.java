@@ -2,6 +2,7 @@ package BKS.복습;
 
 public class PGS_124나라의숫자 {
     // 20240302 19:38 ~ 18:00 복습 다시 하기
+    // 20240303 10:48 ~ 10:58
     public static void main(String[] args) {
         int n = 4;
         String answer = "";
