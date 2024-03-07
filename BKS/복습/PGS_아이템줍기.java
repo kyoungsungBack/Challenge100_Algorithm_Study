@@ -5,6 +5,7 @@ import java.util.Queue;
 
 public class PGS_아이템줍기 {
     // 20240306 09:31 ~ 46 10:02 ~ 11:00 (다시 복습)
+    // 20240307 18:40 ~ 19:13
     static int[][] map;
     static int[] my = {-1, 1, 0, 0};
     static int[] mx = {0, 0, -1, 1};
