@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 public class PGS_오픈채팅방 {
     // 20240313 19:38 ~ 20:11
+
     public static void main(String[] args) {
         String[] record = {"Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"};
         HashMap<String, String> dic = new HashMap<>(); // 유저아이디, 닉네임
