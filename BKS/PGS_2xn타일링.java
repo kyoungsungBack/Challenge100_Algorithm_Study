@@ -2,6 +2,7 @@ package BKS;
 
 public class PGS_2xn타일링 {
     // 20240319 21:14 ~ 10:03 (다시 풀이)
+
     public static void main(String[] args) {
         int n = 4;
         // 0. n을 숫자 1과 2로 만들 수 있는 경우의 수를 구한다.
