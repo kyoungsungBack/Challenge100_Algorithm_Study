@@ -18,7 +18,7 @@ public class PGS_실패율 {
             public int compare(double[] o1, double[] o2) {
                 // 이때, 0번째는 stage, 1번째는 실패율이다.
                 if (o1[1] == o2[1]) {
-                    return (int)o1[0] - (int)o2[0];
+                    return (int)(o1[0] - o2[0]);
                 } else {
                     if (o2[1] > o1[1]) {
                         return 1;
