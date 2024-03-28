@@ -10,7 +10,6 @@ public class PGS_실패율 {
     public static void main(String[] args) {
         int N = 5;
         int[] stages = {2, 1, 2, 6, 2, 4, 3, 3};
-
         int[] answer = new int[N];
         // 1. 우선순위 큐에 2차원 배열을 담고 실패율로 내림차순하고 같으면 작은번호로 정렬한다.
         PriorityQueue<double[]> pq = new PriorityQueue<>(new Comparator<double[]>(){
