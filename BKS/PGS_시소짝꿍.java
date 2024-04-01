@@ -3,6 +3,7 @@ package BKS;
 import java.util.Arrays;
 
 public class PGS_시소짝꿍 {
+
     public static void main(String[] args) {
         long answer = 0;
         int[] weights = {100,180,360,100,270};
