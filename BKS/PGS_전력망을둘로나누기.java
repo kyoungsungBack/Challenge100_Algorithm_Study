@@ -18,7 +18,7 @@ public class PGS_전력망을둘로나누기 {
             list[i] = new ArrayList<>();
         }
 
-        // 1. 간선리스트에 간선정보를 담는다.
+        // 1. 인접리스트에 간선정보를 담는다.
         for (int i = 0 ; i < wires.length ; i++) {
             int start = wires[i][0]; // 시작점
             int end = wires[i][1]; // 도착점
