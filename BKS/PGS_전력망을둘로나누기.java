@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class PGS_전력망을둘로나누기 {
+    // 20240422 12:35 ~ 13:39
     public static ArrayList<Integer>[] list;
     public static void main(String[] args) {
         int n = 9;
