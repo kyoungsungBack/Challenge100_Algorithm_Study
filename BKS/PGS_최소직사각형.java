@@ -9,6 +9,7 @@ public class PGS_최소직사각형 {
         int answer = 0;
         int n = sizes.length;
 
+
         // 1. 하나의 명함의 가로, 세로는 쌍이고 각각 분리하여 배열에 담는다.
         int[] width = new int[n];
         int[] height = new int[n];
