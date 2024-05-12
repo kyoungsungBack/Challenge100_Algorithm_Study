@@ -11,7 +11,6 @@ public class PGS_보석쇼핑 {
         String[] gems = {"DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"};
         int[] answer = new int[2];
         // 시작과 끝 범위 내에서 모든 보석을 하나 이상 갖으며 가장 짧은 구간을 찾는다.
-
         // 1. 일단 map을 통해 모든 보석을 구한다.
         HashMap<String, Integer> map = new HashMap<>();
         HashSet<String> set = new HashSet<>();
