@@ -24,6 +24,7 @@ public class PGS_전화번호목록 {
 
             // 2.1. 현재 수의 길이 만큼 접두어가 map에 존재 하는지 확인한다.
             for (int j = 1 ; j <= len ; j++) {
+                // map.containsKey(num.substring(0, j)) 사용 가능
                 if (map.get(num.substring(0, j)) == null) {
                     continue;
                 } else if (map.get(num.substring(0, j))) {
