@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class PGS_의상 {
     // 20240601 18:26 ~ x
+    // 20240602 15:07 ~ 15:16
     public static void main(String[] args) {
         int answer = 0;
         String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}};
