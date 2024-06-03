@@ -5,6 +5,7 @@ import java.util.Queue;
 
 public class PGS_게임맵최단거리 {
     // 20240303 16:12 ~ 16:33
+    // 20240603 21:48 ~ 22:03
     static int[] mx = {-1, 1, 0, 0};
     static int[] my = {0, 0, -1, 1};
     static int[][] map;
@@ -38,13 +39,15 @@ public class PGS_게임맵최단거리 {
                 int py = cur[0] + my[i];
                 int px = cur[1] + mx[i];
 
-                // 3.1. 범위 안에 있고
-                if (0 <= py && py < m && 0 <= px && px < n) {
-                    // 3.2. 방문 전이면서 갈 수 있으면 간다.
-                    if (!visited[py][px] && maps[py][px] == 1) {
-                        visited[py][px] = true;
-                        que.offer(new int[]{py, px, cur[2] + 1});
-                    }
+                // 2. 맵 범위 밖이면 무시한다.
+                if (0 > py || py >= n || 0 > px || px >= m) {
+                    continue;
+                }
+
+                // 3. 방문 전이면서 갈 수 있으면 간다.
+                if (!visited[py][px] && maps[py][px] == 1) {
+                    visited[py][px] = true;
+                    que.offer(new int[]{py, px, cur[2] + 1});
                 }
             }
         }
