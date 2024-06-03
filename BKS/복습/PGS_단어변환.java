@@ -3,13 +3,14 @@ package BKS.복습;
 public class PGS_단어변환 {
     // 20231210 18:30 ~ 18:50
     // 20240108 09:35 ~ 10:07
+    // 20240603 22:07 ~ 22:30
     static int answer;
 
     public static void main(String[] args) {
         String begin = "hit";
         String target = "cog";
         String[] words = {"hot", "dot", "dog", "lot", "log", "cog"};
-        answer = Integer.MAX_VALUE;
+        answer = words.length;
         /* 함수1 */
         /*
         dfs(0, begin, target, new boolean[words.length], words);
@@ -35,7 +36,7 @@ public class PGS_단어변환 {
         // 1. begin이 target으로 변환될 최소 횟수를 찾는다.
         sol(begin, target, 0, new boolean[words.length], words);
 
-        if (answer == Integer.MAX_VALUE) {
+        if (answer == words.length) {
             System.out.println(0);
         } else {
             System.out.println(answer);
