@@ -5,9 +5,10 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class PGS_여행경로 {
+    // 20231207 09:40 ~ 10:09
+    // 20240605 22:14 ~ x (다시 풀기)
     static ArrayList<String> list;
     public static void main(String[] args) {
-        // 20231207 09:40 ~ 10:09
         String[][] tickets = {{"ICN", "JFK"},{"HND", "IAD"},{"JFK", "HND"}};
         String[] answer;
         list = new ArrayList<>();
