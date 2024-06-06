@@ -7,6 +7,7 @@ import java.util.Collections;
 public class PGS_여행경로 {
     // 20231207 09:40 ~ 10:09
     // 20240605 22:14 ~ x (다시 풀기)
+    // 20240606 13:54 ~ 14:07
     static ArrayList<String> list;
     public static void main(String[] args) {
         String[][] tickets = {{"ICN", "JFK"},{"HND", "IAD"},{"JFK", "HND"}};
