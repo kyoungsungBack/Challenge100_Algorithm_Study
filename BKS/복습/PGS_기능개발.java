@@ -28,11 +28,11 @@ public class PGS_기능개발 {
             if (temp >= cur) {
                 cnt++;
                 que.poll();
-            } else {
-                list.add(cnt);
-                cnt = 0;
-                temp = que.peek();
+                continue;
             }
+            list.add(cnt);
+            cnt = 0;
+            temp = que.peek();
         }
         list.add(cnt);
 
