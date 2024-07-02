@@ -2,6 +2,7 @@ package BKS.복습;
 
 public class PGS_큰수만들기 {
     // 20240111 09:24 ~ 09:31
+    // 20240702 21:30 ~ 21:56
     public static void main(String[] args) {
         String number = "1924";
         int k = 2;
