@@ -4,6 +4,18 @@ import java.util.Arrays;
 
 public class PGS_2개이하로다른비트 {
     // 20240818 못품
+    // 20240819 11:50 ~ 12:07
+
+    /*
+        **추가 공부 필요한 Collection method**
+        Long.valueOf(String 타입의 수, n진수) : n진수인 String 수를 10진수(Long)로 반환
+        Long.parseLong(String 타입의 수, n진수) : n진수인 String 수를 10진수(long)로 반환
+        Long.toString(10진수, n진수) : n진수로 변환 후 String 으로 반환
+        Long.toBinaryString(10진수) : 2진수 변환 후 String 으로 반환
+        String.setCharAt(idx, 넣을 값) : idx에 Char 타입 삽입
+        String.deleteCharAt(지울 idx) : idx에 해당하는 Char 삭제
+    */
+
     public static void main(String[] args) {
         long[] numbers = {2, 7};
         long[] answer = new long[numbers.length];

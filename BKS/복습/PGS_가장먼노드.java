@@ -7,6 +7,7 @@ import java.util.Queue;
 public class PGS_가장먼노드 {
     // 20240306 11:23 ~ 50 12:10 ~ 12:33 (37 + 23 = 60분)
     // 20240307 19:27 ~ 19:48
+    // 20240819 12:37 ~ 13:10
     static ArrayList<Integer>[] map;
     static int N;
     static int answer;
