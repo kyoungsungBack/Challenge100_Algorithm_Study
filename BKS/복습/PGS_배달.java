@@ -47,26 +47,27 @@ public class PGS_배달 {
         int answer = 0;
         int[][] map = new int[N + 1][N + 1];
 
-        // 1. 모든 간선정보에 대한 초기화
+        // 0. 출발, 도착점의 거리를 최대값으로 초기화
         for (int i = 0 ; i <= N ; i++) {
             Arrays.fill(map[i], 2000001);
         }
 
+        // 1. 출발과 도착이 같은 경우 count를 위해 0으로 초기화
         for(int i = 1; i <= N; i++) {
             map[i][i] = 0;
         }
 
-        // 2. 주어진 간선정보를 저장한다.
-        for (int[] r : road) {
-            int start = r[0];
-            int end = r[1];
-            int weight = r[2];
+        // 2. 인접행렬에 현재 노드정보를 담는다.
+        for (int[] node : road) {
+            int start = node[0];
+            int end = node[1];
+            int value = node[2];
 
-            map[start][end] = Math.min(map[start][end], weight);
-            map[end][start] = Math.min(map[end][start], weight);
+            map[start][end] = Math.min(map[start][end], value);
+            map[end][start] = Math.min(map[end][start], value);
         }
 
-        // 3. 각 노드들에 대한 최단거리를 저장한다.
+        // 3. 바로 가는 경우와 중간에 거쳐는 경우를 비교하여 최단거리를 적용한다.
         // -> 플로이드-워셜
         for (int k = 1 ; k <= N ; k++)  {
             for (int i = 1 ; i <= N ; i++) {
@@ -78,7 +79,7 @@ public class PGS_배달 {
             }
         }
 
-        // 4. 1에서 K 비용만큼 갈 수 있는 노드의 개수를 센다.
+        // 4. 1에서 출발했을 때 K이하인 경우 answer 증가한다.
         for (int i = 1 ; i <= N ; i++) {
             if (map[1][i] <= K) answer++;
         }
