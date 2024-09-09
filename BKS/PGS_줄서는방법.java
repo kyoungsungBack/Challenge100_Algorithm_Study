@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class PGS_줄서는방법 {
     // 20240908 12:14 ~ 12:42(시간, 메모리초과)
-    // 다시 풀 것
+    // 20240909 21:33 ~ 21:53
     public static void main(String[] args) {
         int n = 3;
         int k = 5;
@@ -22,9 +22,9 @@ public class PGS_줄서는방법 {
         int idx = 0;
 
         while (idx < n) {
-            f /= n - idx; // 3. 몇개씩 묶음이 되는지 계산한다.
+            f /= (n - idx); // 3. 몇개씩 묶음이 되는지 계산한다. 즉, (n - idx)는 현재 명을 의미한다.
             answer[idx++] = list.remove((int)(k / f));
-            k %= f;
+            k %= f; // 4. 다음 계산에서 몇번째 자리가 필요한지를 의미
         }
 
         System.out.println(answer);
