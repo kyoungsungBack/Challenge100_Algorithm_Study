@@ -26,7 +26,6 @@ public class PGS_줄서는방법 {
             answer[idx++] = list.remove((int)(k / f));
             k %= f; // 4. 다음 계산에서 몇번째 자리가 필요한지를 의미
         }
-
         System.out.println(answer);
     }
 
