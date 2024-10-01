@@ -13,8 +13,6 @@ public class PGS_피로도 {
     }
 
     public static void sol(int cnt, int k, int[][] dungeons, boolean[] isVisited) {
-        answer = Math.max(answer, cnt);
-
         for (int i = 0 ; i < dungeons.length ; i++) {
             if (!isVisited[i] && k >= dungeons[i][0]) {
                 isVisited[i] = true;
@@ -22,5 +20,7 @@ public class PGS_피로도 {
                 isVisited[i] = false;
             }
         }
+
+        answer = Math.max(answer, cnt);
     }
 }
