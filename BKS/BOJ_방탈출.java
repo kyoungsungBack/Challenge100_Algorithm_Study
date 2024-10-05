@@ -47,20 +47,20 @@ public class BOJ_방탈출 {
         System.out.println(resSum);
     }
 
-    public static void sol(int start, int end) {
+    public static void sol(int r, int c) {
         Queue<int[]> que = new LinkedList<>();
         boolean[][] visited = new boolean[N][M];
-        que.offer(new int[]{start, end, 1, map[start][end]});
-        visited[start][end] = true;
+        que.offer(new int[]{r, c, 1, map[r][c]});
+        visited[r][c] = true;
         int curLen = 1; // 현재 턴의 최대 길이 경로
-        int curSum = map[start][end]; // 현재 턴 최대 경로일 때 합
+        int curSum = map[r][c]; // 현재 턴 최대 경로일 때 합
 
         while (!que.isEmpty()) {
             int[] cur = que.poll();
 
             if (curLen < cur[2]) {
                 curLen = cur[2];
-                curSum = map[start][end] + map[cur[0]][cur[1]];
+                curSum = map[r][c] + map[cur[0]][cur[1]];
             }
 
             for (int i = 0 ; i < 4 ; i++) {
