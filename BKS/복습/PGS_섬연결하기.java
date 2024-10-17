@@ -4,8 +4,10 @@ import java.util.Arrays;
 
 public class PGS_섬연결하기 {
     // 20240811 16:52 ~ 17:26
+    // 20241017 23:30 ~ 23:47
     static int[] parent;
     public static void main(String[] args) {
+        // 최소스패닝트리(MST)는 크루스칼 알고리즘(서로소집합 + 그리디)
         int n = 4;
         int[][] costs = {{0,1,1},{0,2,2},{1,2,5},{1,3,1},{2,3,8}};
 
