@@ -6,6 +6,7 @@ import java.util.PriorityQueue;
 
 public class PGS_합승택시요금_다익스트라 {
     // 20240907 17:05 ~ 17:33
+    // 20241017 22:40 ~ 23:10
     static ArrayList<Taxi>[] list;
     public static void main(String[] args) {
         int answer = 20000001;
