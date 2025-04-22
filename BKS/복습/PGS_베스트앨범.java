@@ -4,6 +4,7 @@ import java.util.*;
 
 public class PGS_베스트앨범 {
     // 20240304 21:24 ~ 22:13
+    // 20250422 18:42 ~ 19:35
     public static void main(String[] args) {
         String[] genres = {"classic", "pop", "classic", "classic", "pop"};
         int[] plays = {500, 600, 150, 800, 2500};
